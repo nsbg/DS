@@ -48,9 +48,8 @@ void deque_print(DequeType *q) {
 
 // 삽입
 void add_rear(DequeType *q, element item) {
-    if (is_full(q)) {
+    if (is_full(q))
         error("큐 포화 상태 !!");
-    }
 
     q->rear = (q->rear+1)%MAX_QUEUE_SIZE;
     q->data[q->rear] = item;
